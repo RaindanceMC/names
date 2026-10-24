@@ -1,0 +1,80 @@
+id: coloured-names
+title: Coloured names
+summary: Dye name tags in colours, gradients and styles — then rename mobs and items in colour.
+intro: |
+  A plain name tag is beige. Beige is a lifestyle, but not one I would recommend. Craft a tag with a dye and it remembers the colour — and so does everything you name with it.
+icon: NAME_TAG
+category: Looks & cosmetics
+order: 20
+module: names
+aliases: [namestyle, namecolour, namecolor, nametag, name-tag, colours, colors, gradient, dye, rename]
+keywords: [name tag, color, colour, gradient, bold, italic, underline, obfuscated, coal, glowstone, cauldron, mob, anvil, style]
+commands: [namestyle]
+sections:
+  - question: How do I colour a name tag?
+    title: Dyeing a tag
+    text: |
+      Put one <white>name tag</white> and one <white>dye</white> into a crafting grid (any layout — the 3x3 table or your own 2x2). The result is a tag that remembers that colour. The dye is used up, the tag changes into the coloured one.
+      Recipes do not show in the recipe book, so use {run:/namestyle} — it lists what every item does on this server, each with the colour shown in itself.
+  - question: Which items do what?
+    title: The palette
+    text: |
+      By default every <white>dye</white> gives the colour it has in the game; <white>iron ingot</white> turns bold on or off, <white>stick</white> italic, <white>string</white> underline, <white>shears</white> strikethrough and an <white>ender pearl</white> the scrambled look; <white>coal</white> makes all colours on a tag darker and <white>glowstone dust</white> lighter.
+      Your server's owners can change all that, so {run:/namestyle} is the only list that is always right. Click an entry there to see how to use it.
+  - question: How do I make a gradient?
+    title: Gradients
+    text: |
+      Dye several name tags in different colours and lay them out in the grid next to <i>one plain name tag</i>. The colours run from the leftmost tag to the rightmost — red, left; blue, right: a name fading from red to blue. The result is written onto the plain tag, and the coloured ones are used up.
+      A name can run through at most {setting:names:max-gradient-stops|count} colours (a grid holds nine slots and one is the blank tag). More than that and the grid simply makes nothing.
+  - question: Can I copy a style onto more tags?
+    title: Copying a style
+    text: |
+      Yes, and cheaply: one styled tag and one plain tag side by side give <i>two</i> styled tags. Handy for stocking up before you need a gradient.
+  - question: How do I switch bold or italic on?
+    title: Decorations & shades
+    text: |
+      A decoration item with a tag flips that decoration on; craft it in again and it flips off. A craft that would change nothing makes nothing, so a dye is never wasted turning a red tag red.
+      A shade item (coal, glowstone dust, usually) with an already-coloured tag makes every colour on it a step darker or lighter — a fifth at a time, so repeat until it is the shade you want. A tag with no colour has nothing to shade.
+  - question: How do I name an item in colour?
+    title: Painting an item
+    text: |
+      Put your styled name tag(s) and exactly <i>one</i> other item into the grid. The item comes back named in the style — the whole stack at once, so sixty-four ingots in one go. It keeps its own name if it has one, otherwise its ordinary name gets painted ("Diamond Sword" in your colours; no anvil needed). The tags are used up, one each.
+      Every tag in the grid must be styled; one plain tag among them means a mistake and the grid makes nothing, instead of guessing which one you meant.
+  - question: What does a name tag do on a mob?
+    title: Naming mobs
+    when: names:colour-mob-names
+    text: |
+      Rename a mob with a styled tag and the mob's name comes out in those colours, just as it works with a plain tag otherwise. If the mob cannot be named — or the land says no — nothing happens and nothing is used up.
+  - question: Why is my mob's name just white?
+    title: Mob names are plain
+    when: "!names:colour-mob-names"
+    text: |
+      On this server a styled tag only <i>names</i> a mob, in plain white — painting mob names is switched off. Items, however, can still be painted in the grid.
+  - question: Can I undo a style?
+    title: Washing a tag
+    when: names:wash-in-cauldron
+    text: |
+      Yes: right-click a <white>water cauldron</white> holding the styled tags. The whole stack you hold is washed back to plain name tags and the cauldron loses one level of water, just like washing leather armour or banners.
+  - question: Can I wash a tag clean?
+    title: No washing
+    when: "!names:wash-in-cauldron"
+    text: |
+      Not on this server: a styled name tag stays styled for ever. Choose your colours as if you meant it.
+  - question: Why does my grid make nothing?
+    title: When nothing happens
+    text: |
+      The usual causes:
+      <white>•</white> more colours than the limit of {setting:names:max-gradient-stops|count};
+      <white>•</white> two plain tags in a grid that should have only one blank;
+      <white>•</white> an extra item that is not a dye, decoration or shade — or an item you have already renamed standing in for a reagent;
+      <white>•</white> a craft that would change nothing.
+      Taking the result needs a free cursor (click) or a free inventory slot (shift-click).
+  - question: Do I lose my tags if the plugin goes?
+    title: Are they permanent?
+    text: |
+      A styled tag carries its style inside itself. Nothing is stored on the server per player — the tags in your inventory are the whole record.
+  - question: How do I reload the palette?
+    title: Reloading (staff)
+    permission: colourednames.reload
+    text: |
+      {run:/namestyle reload} re-reads the palette (<white>palette.yml</white>, the colours, decorations and shades) and the settings, and says how many items now do something to a tag. Settings live under {run:/settings} → Coloured names: gradient limit {setting:names:max-gradient-stops|count}, washing in cauldrons {setting:names:wash-in-cauldron|onoff}, painting mob names {setting:names:colour-mob-names|onoff}.

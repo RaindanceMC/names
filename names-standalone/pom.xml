@@ -40,7 +40,7 @@
           a major number is what says "read the notes before upgrading".
              2.3.0: Paper 26.3 natively (paper-api 26.3, api-version 26.3); no longer loads on 26.2.
              2.4.0: RainsCore 2.0 network — the palette is palette.yml, one document for every server (taken over from the old config.yml the first time), read again when another server writes it. -->
-        <plugin.version>2.4.0</plugin.version>
+        <plugin.version>2.5.0</plugin.version>
     </properties>
 
     <dependencies>
