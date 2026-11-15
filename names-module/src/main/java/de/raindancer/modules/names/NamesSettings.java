@@ -41,8 +41,8 @@ public record NamesSettings(
 
         @In("names/crafting") @Title("Most colours in one name") @Range(min = 1, max = 8)
         @Describe("A crafting table holds nine items and one of them has to be the thing being "
-                + "painted, so eight is the ceiling. More tags than this is refused rather than "
-                + "quietly cut short — somebody who lays out nine tags has said what they wanted.")
+                + "painted, so eight is the ceiling. More tags than this is refused, not "
+                + "quietly cut short, because somebody who lays out nine tags has said what they wanted.")
         @Key("max-gradient-stops")
         int maxStops,
 
@@ -50,13 +50,13 @@ public record NamesSettings(
 
         @In("names/world") @Title("A water cauldron washes a tag clean")
         @Describe("The way undyeing leather armour and clearing a banner already work, so it is a "
-                + "guess a player makes rather than a rule they have to be taught. Off leaves a "
+                + "guess a player makes without being taught. Off leaves a "
                 + "styled tag styled for ever, since nothing else takes a style off one.")
         @Key("wash-in-cauldron")
         boolean washInCauldron,
 
         @In("names/world") @Title("Naming a mob paints the mob's name too")
-        @Describe("Off means a styled tag still names the mob, in plain white — which is what a name "
+        @Describe("Off means a styled tag still names the mob, in plain white, which is what a name "
                 + "tag has always done.")
         @Key("colour-mob-names")
         boolean colourMobNames) {

@@ -145,7 +145,7 @@ public final class PaletteFile {
         }
         yaml.setComments("colours", List.of("",
                 "--- What dyes a name tag, and to what ---",
-                "Every dye gives the colour it actually is — the same values Minecraft uses for",
+                "Every dye gives the colour it actually is, the same values Minecraft uses for",
                 "leather armour and concrete. Pink dye makes pink.",
                 "The value is a hex code (#f38baa) or one of Minecraft's colour names (dark_red,",
                 "aqua, light_purple ...). Any item can be listed here, not just dyes."));
@@ -156,7 +156,7 @@ public final class PaletteFile {
         yaml.setComments("decorations", List.of("",
                 "--- What toggles bold, italic and the rest ---",
                 "Crafting the same item in again turns it back off, so a mistake costs one ingot",
-                "and nothing else. Deleting a line removes that recipe outright — which is how you",
+                "and nothing else. Deleting a line removes that recipe outright. That is how you",
                 "forbid obfuscated names, since a name nobody can read is a real thing to keep off",
                 "a server."));
 

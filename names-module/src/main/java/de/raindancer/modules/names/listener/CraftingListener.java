@@ -89,6 +89,6 @@ public final class CraftingListener implements INamesListener {
 
     @Override
     public String describe() {
-        return "the crafting grid — the preview, the click that takes it, and the drag that must not";
+        return "the crafting grid: the preview, the click that takes it, and the drag that must not";
     }
 }
