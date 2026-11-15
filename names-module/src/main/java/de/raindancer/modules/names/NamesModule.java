@@ -49,7 +49,7 @@ import java.util.List;
  */
 public final class NamesModule implements FlexModule {
 
-    private static final ModuleInfo INFO = ModuleInfo.of("names", "Coloured names", "2.5.0")
+    private static final ModuleInfo INFO = ModuleInfo.of("names", "Coloured names", "2.5.1")
             .describedAs("Dye a name tag, then craft it with an item to paint that item's name. "
                     + "Gradients included")
             .by("Raindancer118");
