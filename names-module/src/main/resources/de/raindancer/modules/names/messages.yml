@@ -9,7 +9,7 @@
 # time.
 names:
 
-  no-permission: "<red>You may not do that."
+  no-permission: "<red>You do not have permission for that."
 
   reloaded: "<green>Reloaded. <white><count></white> item(s) now do something to a name tag."
 
@@ -21,7 +21,7 @@ names:
       - "<gray>Craft a name tag with a dye and the tag remembers that colour."
       - "<gray>Craft the tag with an item and the item's name is painted in it."
       - "<gray>Lay several tags out and the name runs from the leftmost colour"
-      - "<gray>to the rightmost one — up to <white><stops></white> stops."
+      - "<gray>to the rightmost one, up to <white><stops></white> stops."
       - "<dark_gray>A decoration item flips that decoration on and off again."
       - "<dark_gray>A dyed tag next to a plain one copies the style onto it."
       - "<dark_gray>Two or more dyed tags with a plain one among them burn the"
@@ -38,7 +38,7 @@ names:
     # Every colour, decoration and shade has been deleted from the config. A real state, and one worth
     # naming: otherwise the manual is a heading with nothing under it and reads as broken.
     empty:
-      - "<red>Nothing dyes a name tag on this server. Beige forever."
+      - "<red>Nothing dyes a name tag on this server."
       - "<gray>The colours, decorations and shades sections of palette.yml are all empty."
 
   # What clicking an entry in the manual says. <item> is the item, <what> is what it does.
